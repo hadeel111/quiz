@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="loginStyle.css">
+
+      
+
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login" id="login-form">
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" id="username" placeholder="User name / Email">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" id="password" placeholder="Password">
+                    </div>
+                    <button type="button" class="button login__submit" onclick="login()">Log In Now
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>				
+                </form>
+                <div class="social-login">
+                    <h3>log in via</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-login__icon fab fa-instagram"></a>
+                        <a href="#" class="social-login__icon fab fa-facebook"></a>
+                        <a href="#" class="social-login__icon fab fa-twitter"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>		
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>		
+        </div>
+    </div>
+    
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            
+            if (username === 'quiz@gmail.com' && password === '12345') {
+                window.location.href = 'index.html';
+            } else {
+                showAlert('Error: Invalid username or password', 'error');
+            }
+        }
+
+        function showAlert(message, type) {
+            var alertBox = document.createElement('div');
+            alertBox.className = 'alert ' + type;
+            alertBox.innerHTML = '<p>' + message + '</p>' +
+                '<span class="close-btn" onclick="this.parentElement.style.display=\'none\'">&times;</span>';
+            document.body.appendChild(alertBox);
+        }
+    </script>
+</body>
+</html>

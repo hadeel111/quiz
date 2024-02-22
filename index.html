@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <h1>Quiz App</h1>
+        <div class="quiz">
+            <h2 id="question">Question 1: When was Visual Studio founded?</h2>
+            <div id="answer-buttons">
+                <button class="btn" onclick="checkAnswer(this)">1996</button>
+                <button class="btn" onclick="checkAnswer(this)">1997</button>
+                <button class="btn" onclick="checkAnswer(this)">2001</button>
+                <button class="btn" onclick="checkAnswer(this)">1992</button>
+            </div>
+            <button id="next-btn" onclick="nextQuestion()" >Next</button>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
